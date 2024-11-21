@@ -1,7 +1,7 @@
 # MathsHelper
 
 ## Description
-MathsHelper is a CLI tool for doing mathematics things such as finding area of square etc...
+MathsHelper is a CLI tool for doing mathematics things such as finding area, perimeter etc...
 
 ## Features
 MathsHelper **can find** ...:
