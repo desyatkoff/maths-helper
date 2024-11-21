@@ -2,7 +2,7 @@ import os
 import time
 
 
-ascii_logo = """
+ASCII_LOGO = """
 ███╗   ███╗ █████╗ ████████╗██╗  ██╗███████╗    
 ████╗ ████║██╔══██╗╚══██╔══╝██║  ██║██╔════╝    
 ██╔████╔██║███████║   ██║   ███████║███████╗    
@@ -18,10 +18,19 @@ ascii_logo = """
 ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝
 """
 
+if os.name == "nt":
+    CLEAR_CMD = "cls"
+else:
+    CLEAR_CMD = "clear"
+
 
 class MathsHelper:
     def __init__(self):
-        print(f"{ascii_logo}\n\n")
+        print(f"{ASCII_LOGO}\nMathsHelper by Serriox\n\n\n")
+
+        input("Press <Enter> to open menu...\n")
+
+        os.system(CLEAR_CMD)
 
         self.menu()
 
@@ -31,128 +40,192 @@ class MathsHelper:
 """
 You want to find a ...?
 
-1. Area of square
-2. Area of circle
-3. Perimeter of square
-4. Hypotenuse
-5. Circle length
-
 0. Exit
-\n
+
+1. Area
+1.1. Area of rectangle
+1.2. Area of circle
+1.3. Area of rhombus
+
+2. Perimeter
+2.1. Perimeter of rectangle
+2.2. Perimeter of circle
+2.3. Perimeter of rhombus
+
+3. Other
+3.1. Hypotenuse
 """
         )
 
 
-        self.option = input("Choose [0-5]: ")
-        print("\n\n")
+        self.option = input("Choose\n: ")
 
 
-        if self.option == "1":
-            self.area_of_square()
-        elif self.option == "2":
-            self.area_of_circle()
-        elif self.option == "3":
-            self.perimeter_of_square()
-        elif self.option == "4":
-            self.hypotenuse()
-        elif self.option == "5":
-            self.circle_length()
-        elif self.option == "0":
-            self.are_you_sure = input("Are you sure? [Y/n] ")
+        print("\n")
+
+
+        if self.option == "0":
+            self.are_you_sure = input("Are you sure? [Y/n]\n: ")
 
             if self.are_you_sure.lower() == "y" or len(self.are_you_sure) < 1:
                 quit(0)
             else:
+                os.system(CLEAR_CMD)
+
                 self.menu()
+        elif self.option == "1.1":
+            self.area_of_rectangle()
+        elif self.option == "1.2":
+            self.area_of_circle()
+        elif self.option == "1.3":
+            self.area_of_rhombus()
+        elif self.option == "2.1":
+            self.perimeter_of_rectangle()
+        elif self.option == "2.2":
+            self.perimeter_of_circle()
+        elif self.option == "2.3":
+            self.perimeter_of_rhombus()
+        elif self.option == "3.1":
+            self.hypotenuse()
         else:
             print("Incorrect value!")
+
+            time.sleep(1)
+
+            os.system(CLEAR_CMD)
 
             self.menu()
 
 
-    def area_of_square(self):
-        self.square_side = input("Square side: ")
+    def area_of_rectangle(self):
+        self.rect_side_a = input("First rectangle side\n: ")
+        self.rect_side_b = input("Second rectangle side\n: ")
 
         try:
-            print(f"Result: {float(self.square_side) ** 2}\n\n")
+            print(f"Result\n: {float(self.rect_side_a) * float(self.rect_side_b)}\n")
         except BaseException:
-            print("Incorrect value!\n\n")
+            print("Incorrect value!")
 
             time.sleep(1)
 
-            if os.name == "nt":
-                os.system("cls")
-            else:
-                os.system("clear")
+            os.system(CLEAR_CMD)
+
+        input("Press <Enter> to continue...\n")
+
+        os.system(CLEAR_CMD)
 
         self.menu()
 
     def area_of_circle(self):
-        self.radius = input("Radius: ")
+        self.radius = input("Radius\n: ")
 
         try:
-            print(f"Result: {3.14 * (float(self.radius) ** 2)}\n\n")
+            print(f"Result\n: {3.14 * (float(self.radius) ** 2)}\n")
         except BaseException:
-            print("Incorrect value!\n\n")
+            print("Incorrect value!")
 
             time.sleep(1)
 
-            if os.name == "nt":
-                os.system("cls")
-            else:
-                os.system("clear")
+            os.system(CLEAR_CMD)
+
+        input("Press <Enter> to continue...\n")
+
+        os.system(CLEAR_CMD)
 
         self.menu()
 
-    def perimeter_of_square(self):
-        self.square_side = input("Square side: ")
+    def area_of_rhombus(self):
+        self.diagonal_a = input("First diagonal\n: ")
+        self.diagonal_b = input("Second diagonal\n: ")
 
         try:
-            print(f"Result: {float(self.square_side) * 4}\n\n")
+            print(f"Result\n: {(float(self.diagonal_a) * float(self.diagonal_b)) / 2}\n")
         except BaseException:
-            print("Incorrect value!\n\n")
+            print("Incorrect value!")
 
             time.sleep(1)
 
-            if os.name == "nt":
-                os.system("cls")
-            else:
-                os.system("clear")
+            os.system(CLEAR_CMD)
+
+        input("Press <Enter> to continue...\n")
+
+        os.system(CLEAR_CMD)
 
         self.menu()
+
+
+    def perimeter_of_rectangle(self):
+        self.rect_side_a = input("First rectangle side\n: ")
+        self.rect_side_b = input("Second rectangle side\n: ")
+
+        try:
+            print(f"Result\n: {(float(self.rect_side_a) + float(self.rect_side_b)) * 2}\n")
+        except BaseException:
+            print("Incorrect value!")
+
+            time.sleep(1)
+
+            os.system(CLEAR_CMD)
+
+        input("Press <Enter> to continue...\n")
+
+        os.system(CLEAR_CMD)
+
+        self.menu()
+
+    def perimeter_of_circle(self):
+        self.radius = input("Radius\n: ")
+
+        try:
+            print(f"Result\n: {2 * 3.14 * float(self.radius)}\n")
+        except BaseException:
+            print("Incorrect value!")
+
+            time.sleep(1)
+
+            os.system(CLEAR_CMD)
+
+        input("Press <Enter> to continue...\n")
+
+        os.system(CLEAR_CMD)
+
+        self.menu()
+
+    def perimeter_of_rhombus(self):
+        self.side = input("Rhombus side\n: ")
+
+        try:
+            print(f"Result\n: {float(self.side) * 4}\n")
+        except BaseException:
+            print("Incorrect value!")
+
+            time.sleep(1)
+
+            os.system(CLEAR_CMD)
+
+        input("Press <Enter> to continue...\n")
+
+        os.system(CLEAR_CMD)
+
+        self.menu()
+
 
     def hypotenuse(self):
-        self.cathetus_a = input("Cathetus A: ")
-        self.cathetus_b = input("Cathetus B: ")
+        self.cathetus_a = input("Cathetus A\n: ")
+        self.cathetus_b = input("Cathetus B\n: ")
 
         try:
-            print(f"Result: {((float(self.cathetus_a) ** 2) + (float(self.cathetus_b) ** 2)) ** 0.5}\n\n")
+            print(f"Result\n: {((float(self.cathetus_a) ** 2) + (float(self.cathetus_b) ** 2)) ** 0.5}\n")
         except BaseException:
-            print("Incorrect value!\n\n")
+            print("Incorrect value!")
 
             time.sleep(1)
 
-            if os.name == "nt":
-                os.system("cls")
-            else:
-                os.system("clear")
+            os.system(CLEAR_CMD)
 
-        self.menu()
+        input("Press <Enter> to continue...\n")
 
-    def circle_length(self):
-        self.radius = input("Radius: ")
-
-        try:
-            print(f"Result: {2 * 3.14 * float(self.radius)}\n\n")
-        except BaseException:
-            print("Incorrect value!\n\n")
-
-            time.sleep(1)
-
-            if os.name == "nt":
-                os.system("cls")
-            else:
-                os.system("clear")
+        os.system(CLEAR_CMD)
 
         self.menu()
 
