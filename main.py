@@ -46,6 +46,7 @@ You want to find a ...?
 1.1. Area of rectangle
 1.2. Area of circle
 1.3. Area of rhombus
+1.4. Area of ellipse
 
 2. Perimeter
 2.1. Perimeter of rectangle
@@ -79,6 +80,8 @@ You want to find a ...?
             self.area_of_circle()
         elif self.option == "1.3":
             self.area_of_rhombus()
+        elif self.option == "1.4":
+            self.area_of_ellipse()
         elif self.option == "2.1":
             self.perimeter_of_rectangle()
         elif self.option == "2.2":
@@ -140,6 +143,25 @@ You want to find a ...?
 
         try:
             print(f"Result\n: {(float(self.diagonal_a) * float(self.diagonal_b)) / 2}\n")
+        except BaseException:
+            print("Incorrect value!")
+
+            time.sleep(1)
+
+            os.system(CLEAR_CMD)
+
+        input("Press <Enter> to continue...\n")
+
+        os.system(CLEAR_CMD)
+
+        self.menu()
+
+    def area_of_ellipse(self):
+        self.diagonal_a = input("First diagonal\n: ")
+        self.diagonal_b = input("Second diagonal\n: ")
+
+        try:
+            print(f"Result\n: {3.14 * float(self.diagonal_a) * float(self.diagonal_b)}\n")
         except BaseException:
             print("Incorrect value!")
 
