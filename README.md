@@ -10,6 +10,7 @@ MathsHelper **can find** ...:
 1. Area of rectangle
 2. Area of circle
 3. Area of rhombus
+4. Area of ellipse
 
 **2. Perimeter**
 1. Perimeter of rectangle
@@ -23,5 +24,5 @@ MathsHelper **can find** ...:
 
 ## Screenshots
 ![1](https://github.com/user-attachments/assets/0bbc9e29-3867-431f-9b57-22a00d37660d)
-![2](https://github.com/user-attachments/assets/38f0dbcd-9357-4290-9a8d-fe4dc4ee16f7)
-![3](https://github.com/user-attachments/assets/8ccfca27-14a3-41c6-b74c-b42eb61051b8)
+![2](https://github.com/user-attachments/assets/72cb41e7-6f58-4396-992d-e9bffe5902dc)
+![3](https://github.com/user-attachments/assets/779d2da9-e2e8-4c88-b736-66f04c0d34e7)
