@@ -3,6 +3,9 @@
 ## Description
 MathsHelper is a CLI tool for doing mathematics things such as finding area, perimeter etc...
 
+## Requirements
+- [Rich](https://pypi.org/project/rich/)
+
 ## Features
 MathsHelper **can find** ...:
 
@@ -23,6 +26,6 @@ MathsHelper **can find** ...:
 *That's all yet, but I will update this project soon. :)*
 
 ## Screenshots
-![1](https://github.com/user-attachments/assets/0bbc9e29-3867-431f-9b57-22a00d37660d)
-![2](https://github.com/user-attachments/assets/72cb41e7-6f58-4396-992d-e9bffe5902dc)
-![3](https://github.com/user-attachments/assets/779d2da9-e2e8-4c88-b736-66f04c0d34e7)
+![1](https://github.com/user-attachments/assets/5e3deaab-4c11-49bb-b0b3-085cbec115a6)
+![2](https://github.com/user-attachments/assets/687fd528-f38f-47d3-aee9-47b1938ff6c9)
+![3](https://github.com/user-attachments/assets/e093230c-602f-4d62-ad40-59dec310be9f)
