@@ -1,6 +1,8 @@
 import os
 import time
 
+import rich
+
 
 ASCII_LOGO = """
 ███╗   ███╗ █████╗ ████████╗██╗  ██╗███████╗    
@@ -26,9 +28,9 @@ else:
 
 class MathsHelper:
     def __init__(self):
-        print(f"{ASCII_LOGO}\nMathsHelper by Serriox\n\n\n")
+        rich.print(f"{ASCII_LOGO}\nMathsHelper by [blue]Serriox[/blue]\n\n\n")
 
-        input("Press <Enter> to open menu...\n")
+        input("Press <Enter> to open menu...")
 
         os.system(CLEAR_CMD)
 
@@ -36,25 +38,25 @@ class MathsHelper:
 
 
     def menu(self):
-        print(
+        rich.print(
 """
 You want to find a ...?
 
-0. Exit
+[bold red]0.[/bold red] [red]Exit[/red]
 
-1. Area
-1.1. Area of rectangle
-1.2. Area of circle
-1.3. Area of rhombus
-1.4. Area of ellipse
+[bold green]1.[/bold green] [green]Area[/green]
+[bold green]1.1.[/bold green] [green]Area of rectangle[/green]
+[bold green]1.2.[/bold green] [green]Area of circle[/green]
+[bold green]1.3.[/bold green] [green]Area of rhombus[/green]
+[bold green]1.4.[/bold green] [green]Area of ellipse[/green]
 
-2. Perimeter
-2.1. Perimeter of rectangle
-2.2. Perimeter of circle
-2.3. Perimeter of rhombus
+[bold blue]2.[/bold blue] [blue]Perimeter[/blue]
+[bold blue]2.1.[/bold blue] [blue]Perimeter of rectangle[/blue]
+[bold blue]2.2.[/bold blue] [blue]Perimeter of circle[/blue]
+[bold blue]2.3.[/bold blue] [blue]Perimeter of rhombus[/blue]
 
-3. Other
-3.1. Hypotenuse
+[bold yellow]3.[/bold yellow] [yellow]Other[/yellow]
+[bold yellow]3.1.[/bold yellow] [yellow]Hypotenuse[/yellow]
 """
         )
 
@@ -91,7 +93,7 @@ You want to find a ...?
         elif self.option == "3.1":
             self.hypotenuse()
         else:
-            print("Incorrect value!")
+            rich.print("[red]Incorrect value![/red]")
 
             time.sleep(1)
 
@@ -105,9 +107,9 @@ You want to find a ...?
         self.rect_side_b = input("Second rectangle side\n: ")
 
         try:
-            print(f"Result\n: {float(self.rect_side_a) * float(self.rect_side_b)}\n")
+            rich.print(f"[green]Result\n:[/green] {float(self.rect_side_a) * float(self.rect_side_b)}\n")
         except BaseException:
-            print("Incorrect value!")
+            rich.print("[red]Incorrect value![/red]")
 
             time.sleep(1)
 
@@ -123,9 +125,9 @@ You want to find a ...?
         self.radius = input("Radius\n: ")
 
         try:
-            print(f"Result\n: {3.14 * (float(self.radius) ** 2)}\n")
+            rich.print(f"[green]Result\n:[/green] {3.14 * (float(self.radius) ** 2)}\n")
         except BaseException:
-            print("Incorrect value!")
+            rich.print("[red]Incorrect value![/red]")
 
             time.sleep(1)
 
@@ -142,9 +144,9 @@ You want to find a ...?
         self.diagonal_b = input("Second diagonal\n: ")
 
         try:
-            print(f"Result\n: {(float(self.diagonal_a) * float(self.diagonal_b)) / 2}\n")
+            rich.print(f"[green]Result\n:[/green] {(float(self.diagonal_a) * float(self.diagonal_b)) / 2}\n")
         except BaseException:
-            print("Incorrect value!")
+            rich.print("[red]Incorrect value![/red]")
 
             time.sleep(1)
 
@@ -161,9 +163,9 @@ You want to find a ...?
         self.diagonal_b = input("Second diagonal\n: ")
 
         try:
-            print(f"Result\n: {3.14 * float(self.diagonal_a) * float(self.diagonal_b)}\n")
+            rich.print(f"[green]Result\n:[/green] {3.14 * float(self.diagonal_a) * float(self.diagonal_b)}\n")
         except BaseException:
-            print("Incorrect value!")
+            rich.print("[red]Incorrect value![/red]")
 
             time.sleep(1)
 
@@ -181,9 +183,9 @@ You want to find a ...?
         self.rect_side_b = input("Second rectangle side\n: ")
 
         try:
-            print(f"Result\n: {(float(self.rect_side_a) + float(self.rect_side_b)) * 2}\n")
+            rich.print(f"[green]Result\n:[/green] {(float(self.rect_side_a) + float(self.rect_side_b)) * 2}\n")
         except BaseException:
-            print("Incorrect value!")
+            rich.print("[red]Incorrect value![/red]")
 
             time.sleep(1)
 
@@ -199,9 +201,9 @@ You want to find a ...?
         self.radius = input("Radius\n: ")
 
         try:
-            print(f"Result\n: {2 * 3.14 * float(self.radius)}\n")
+            rich.print(f"[green]Result\n:[/green] {2 * 3.14 * float(self.radius)}\n")
         except BaseException:
-            print("Incorrect value!")
+            rich.print("[red]Incorrect value![/red]")
 
             time.sleep(1)
 
@@ -217,9 +219,9 @@ You want to find a ...?
         self.side = input("Rhombus side\n: ")
 
         try:
-            print(f"Result\n: {float(self.side) * 4}\n")
+            rich.print(f"[green]Result\n:[/green] {float(self.side) * 4}\n")
         except BaseException:
-            print("Incorrect value!")
+            rich.print("[red]Incorrect value![/red]")
 
             time.sleep(1)
 
@@ -237,9 +239,9 @@ You want to find a ...?
         self.cathetus_b = input("Cathetus B\n: ")
 
         try:
-            print(f"Result\n: {((float(self.cathetus_a) ** 2) + (float(self.cathetus_b) ** 2)) ** 0.5}\n")
+            rich.print(f"[green]Result\n:[/green] {((float(self.cathetus_a) ** 2) + (float(self.cathetus_b) ** 2)) ** 0.5}\n")
         except BaseException:
-            print("Incorrect value!")
+            rich.print("[red]Incorrect value![/red]")
 
             time.sleep(1)
 
