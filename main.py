@@ -28,7 +28,7 @@ else:
 
 class MathsHelper:
     def __init__(self):
-        rich.print(f"{ASCII_LOGO}\nMathsHelper by [blue]Serriox[/blue]\n\n\n")
+        rich.print(f"{ASCII_LOGO}\nMathsHelper by [blue]Serriox (@desyatkoff)[/blue]\n\n\n")
 
         input("Press <Enter> to open menu...")
 
